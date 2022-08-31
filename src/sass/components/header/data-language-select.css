@@ -1,0 +1,39 @@
+
+body {
+	min-height: 99vh;
+	display: grid;
+	place-items: center;
+}
+
+[data-language-select] {
+	background: #111;
+	color: white;
+	border-radius: 1.6em;
+	overflow: hidden;
+	
+}
+
+[data-language-select] button {
+	padding: .8em 1.2em;
+	appearance: none;
+	border: none;
+	color: inherit;
+	background: inherit;
+}
+
+[data-language-select] ul {
+	display: none;
+	list-style: none;
+	padding: 0 0 .8em;
+	margin: 0;
+}
+
+[data-language-select] [aria-expanded="true"] + ul {
+	display: block;
+}
+
+[data-language-select] a {
+	color: inherit;
+	padding: .2em 1.2em;
+	display: inline-block;
+}
