@@ -290,10 +290,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   }
 
   if ($openSecondaryMenu1.length > 0) {
-    var template = document.getElementById('secondary-navigation-template');
+    var _template = document.getElementById('secondary-navigation-template1');
+
     secondaryMenuTippy = (0,tippy_js__WEBPACK_IMPORTED_MODULE_9__["default"])('.js-open-secondary-menu1', {
       appendTo: document.body,
-      content: template.innerHTML,
+      content: _template.innerHTML,
       allowHTML: true,
       arrow: true,
       trigger: 'click',

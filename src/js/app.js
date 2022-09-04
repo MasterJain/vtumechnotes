@@ -26,6 +26,7 @@ $(() => {
   const $submenu = $('.js-submenu');
   const $recentSlider = $('.js-recent-slider');
   const $openSecondaryMenu = $('.js-open-secondary-menu');
+  const $openSecondaryMenu1 = $('.js-open-secondary-menu1');
   const $openSearch = $('.js-open-search');
   const $closeSearch = $('.js-close-search');
   const $search = $('.js-search');
@@ -296,6 +297,26 @@ $(() => {
       }
     });
   }
+
+  if ($openSecondaryMenu1.length > 0) {
+    const template = document.getElementById('secondary-navigation-template1');
+
+    secondaryMenuTippy = tippy('.js-open-secondary-menu1', {
+      appendTo: document.body,
+      content: template.innerHTML,
+      allowHTML: true,
+      arrow: true,
+      trigger: 'click',
+      interactive: true,
+      onShow() {
+        toggleDesktopTopbarOverflow(true);
+      },
+      onHidden() {
+        toggleDesktopTopbarOverflow(false);
+      }
+    });
+  }
+
 
   tippy('.js-tooltip');
 
